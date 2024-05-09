@@ -1,0 +1,31 @@
+def matem_operation(operation):
+    if operation == 'division':
+        def division(x,y):
+            return x/y
+        return division
+    elif operation == 'multiplication':
+        def multiplication(x,y):
+            return x*y
+        return multiplication
+
+my_func_div = matem_operation('division')
+# my_func_div = matem_operation('multiplication')
+print(my_func_div(1,2))
+
+
+multiply = lambda x: x**2
+print(multiply(4))
+
+def multiply_def(x):
+   return x**2
+print(multiply_def(2))
+
+class Rect:
+    def __init__(self,value):
+        self.value = value
+    def __call__(self,b):
+        return [self.value] * b
+
+repeat_Rect = Rect(5)
+print(repeat_Rect(3))
+
